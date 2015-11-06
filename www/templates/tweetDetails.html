@@ -1,0 +1,11 @@
+<ion-view view-title="Details" ng-controller="appService">
+  <ion-content>
+
+    <div class="item item-thumbnail">
+      <h1 id="hTagDetails">{{detailTweet.user.name}}</h1>
+      <img ng-src="{{detailTweet.user.profile_image_url}}"/>
+      <p id="pTagDetails">{{correctTimestring(detailTweet.created_at) | date:'medium'}}</p>
+    </div>
+
+  </ion-content>
+</ion-view>

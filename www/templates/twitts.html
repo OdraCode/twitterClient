@@ -1,0 +1,46 @@
+<ion-view view-title="Tweets" ng-controller="appService">
+  <ion-content class="has-header padding tweetMargine">
+    <div ng-show="online">You're online</div>
+    <div ng-hide="online">You're offline</div>
+
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Search" ng-model="tweet.searchT" ng-maxlength="100">
+        </label>
+            <button class="button button-small" ng-click="searchTweets()">
+              Search
+            </button>
+          </div>
+        </div>
+        <ion-refresher pulling-text="Refresh" on-refresh="doRefresh()"></ion-refresher>
+
+        <div ng-show="home_timeline.length == 0"><ion-spinner icon="spiral"></ion-spinner>Loading</div>
+
+        <div ng-show="home_timeline.length > 0" ng-repeat="entry in home_timeline" class="list card">
+          <div class="item item-avatar" ng-click="getDetails(entry)">
+            <img ng-src="{{entry.user.profile_image_url}}"/>
+            <h2>{{entry.user.name}}</h2>
+            <p>{{correctTimestring(entry.created_at) | date:'medium'}}</p>
+          </div>
+
+          <div class="item item-body">
+            <p ng-bind-html="entry.text"></p>
+            <img ng-if="entry.extended_entities" ng-src="{{ entry.extended_entities.media[0].media_url }}" style="width: 100%;"/>
+          </div>
+        </div>
+  </ion-content>
+
+  <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+    <ion-tab title="m - Way" icon-on="ion-ios-information" icon-off="ion-ios-information-outline" href="#/tab/mway">
+      <ion-nav-view name="mway"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Twitts" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/app/twitts">
+    </ion-tab>
+
+    <ion-tab title="About this app" icon-off="ion-ios-help-outline" icon-on="ion-ios-help" href="#/tab/aboutApp">
+      <ion-nav-view name="aboutApp"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+</ion-view>

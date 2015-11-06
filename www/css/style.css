@@ -1,0 +1,90 @@
+
+.start-body{
+  background-color: #00aced;
+}
+#startTitle{
+  color: white;
+  text-align: center;
+  margin-top: 120px;
+}
+.logo-start{
+  display: block;
+  margin: 0 auto;
+}
+/*/////////IMPRINT\\\\\\\\\\\*/
+#mway{
+  background-color: #00aced;
+}
+.mway-logo{
+  text-align: center;
+  width: 100%;
+  margin-left: 0px;
+  border-radius: 0%;
+  margin-top: 0px;
+}
+#tekst{
+  text-align: center;
+  color: white;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  word-spacing: 6px;
+}
+
+.imprint{
+  color: #4d4d4d;
+  line-height: 6px;
+}
+.imprint_wrapper{
+  margin-top: 70px;
+  margin-left: 40px;
+}
+.imprint_wrapper2{
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.taglineAboutApp{
+  margin-top: 40px;
+}
+/*MENU*/
+
+.item .item-content.activated {
+  background-color: #00aced;
+  color:white;
+}
+.menuItem{
+   color:#00aced;
+  font-size: large;
+ }
+.log.activated{
+  color: white;
+  background-color:#00aced;
+}
+
+/*  ABOUT PAGE */
+
+.slider{
+  height: 100%;
+  text-align: center;
+}
+.back1{
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+
+/*  TWEET  */
+.tweetMargine{
+  margin-top: 50px;
+}
+
+/* details*/
+.item-thumbnail{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+#pTagDetails{
+  margin-top: 20px;
+}
